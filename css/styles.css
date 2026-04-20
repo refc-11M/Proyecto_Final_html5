@@ -1,47 +1,130 @@
-body {
-    font-family: Arial;
+/* RESET */
+* {
     margin: 0;
-    background-color: #f4f4f4;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* BODY */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #333;
+}
+
+/* HEADER */
 header {
-    background-color: #2c3e50;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
     color: white;
+    padding: 20px;
     text-align: center;
-    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+
+/* NAV */
 nav ul {
     list-style: none;
-    padding: 0;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 10px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
 }
 
+nav ul li a:hover {
+    background: #00c6ff;
+    color: black;
+}
+
+/* SECTIONS */
 section {
-    padding: 20px;
-    margin: 10px;
-    background: white;
-    border-radius: 10px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1000px;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    animation: fadeIn 1s ease;
 }
 
+/* TITULOS */
+section h2 {
+    margin-bottom: 15px;
+    color: #2a5298;
+    border-left: 5px solid #00c6ff;
+    padding-left: 10px;
+}
+
+/* TEXTO */
+section p {
+    line-height: 1.6;
+}
+
+/* IMÁGENES */
 img {
-    width: 45%;
-    margin: 5px;
-    border-radius: 10px;
+    width: 48%;
+    margin: 1%;
+    border-radius: 12px;
+    transition: transform 0.4s, box-shadow 0.4s;
+    cursor: pointer;
 }
 
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* GALERÍA */
+#galeria {
+    text-align: center;
+}
+
+/* FOOTER */
 footer {
     text-align: center;
-    background-color: #2c3e50;
+    padding: 15px;
+    background: rgba(0,0,0,0.8);
     color: white;
-    padding: 10px;
+    margin-top: 20px;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    img {
+        width: 100%;
+    }
+
+    nav ul li {
+        display: block;
+    }
 }
