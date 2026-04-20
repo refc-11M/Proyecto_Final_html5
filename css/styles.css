@@ -7,27 +7,20 @@
 
 /* BODY */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: #333;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
 }
 
 /* HEADER */
 header {
-    background: rgba(0,0,0,0.7);
-    backdrop-filter: blur(10px);
+    background: #222;
     color: white;
-    padding: 20px;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 20px;
 }
 
 header h1 {
     margin-bottom: 10px;
-    font-size: 2.5em;
-    letter-spacing: 2px;
 }
 
 /* NAV */
@@ -37,40 +30,41 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    margin: 10px;
+    margin: 5px;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
+    color: white;
+    background: #ff7e5f;
     padding: 8px 15px;
-    border-radius: 20px;
+    border-radius: 5px;
     transition: 0.3s;
 }
 
+/* HOVER NAV */
 nav ul li a:hover {
-    background: #00c6ff;
+    background: #feb47b;
     color: black;
 }
 
-/* SECTIONS */
+/* SECCIONES */
 section {
-    margin: 30px auto;
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
     width: 90%;
     max-width: 1000px;
-    padding: 25px;
-    border-radius: 15px;
-    background: rgba(255,255,255,0.95);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    animation: fadeIn 1s ease;
+    border-radius: 10px;
+
+    /* SOMBRA */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 /* TITULOS */
 section h2 {
-    margin-bottom: 15px;
-    color: #2a5298;
-    border-left: 5px solid #00c6ff;
-    padding-left: 10px;
+    color: #ff7e5f;
+    margin-bottom: 10px;
 }
 
 /* TEXTO */
@@ -82,40 +76,21 @@ section p {
 img {
     width: 48%;
     margin: 1%;
-    border-radius: 12px;
-    transition: transform 0.4s, box-shadow 0.4s;
-    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
+/* HOVER IMAGEN */
 img:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-}
-
-/* GALERÍA */
-#galeria {
-    text-align: center;
 }
 
 /* FOOTER */
 footer {
+    background: #222;
+    color: white;
     text-align: center;
     padding: 15px;
-    background: rgba(0,0,0,0.8);
-    color: white;
-    margin-top: 20px;
-}
-
-/* ANIMACIÓN */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* RESPONSIVE */
